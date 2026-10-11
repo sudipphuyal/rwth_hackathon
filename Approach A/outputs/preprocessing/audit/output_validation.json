@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "partition_count": 410,
+  "validated_rows": 1102080,
+  "selected_slice_target_counts": {
+    "measured": 1035936,
+    "reconstructed": 0,
+    "missing": 66144
+  },
+  "oracle_sunshine_missing_rows": 80640,
+  "missing_issued_weather_placeholder_cells": 6612480,
+  "real_household_future_poison_tests": [
+    {
+      "Household_ID": "661091",
+      "future_poisoning_changed_features": false
+    },
+    {
+      "Household_ID": "676510",
+      "future_poisoning_changed_features": false
+    },
+    {
+      "Household_ID": "996610",
+      "future_poisoning_changed_features": false
+    }
+  ],
+  "checks": [
+    "cutoff_lineage",
+    "target_provenance",
+    "full_portfolio",
+    "96_intervals_per_issue",
+    "uniform_schema",
+    "oracle_join",
+    "local_calendar",
+    "unknown_metadata",
+    "issued_weather_not_fabricated",
+    "future_poisoning"
+  ]
+}

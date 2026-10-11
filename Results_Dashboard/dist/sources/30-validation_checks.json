@@ -1,0 +1,12 @@
+{
+  "FrozenInputsUnchanged": true,
+  "ExistingQuantilesReproduced": true,
+  "TestUsedForPolicySelection": false,
+  "ScoredTestIntervals": 34944,
+  "ScoredTestDays": 364,
+  "UnseenIntervalsPerMethod": 96,
+  "Status": "PROVISIONAL",
+  "MLDailyPointUnchanged_MWh": 13.01490866575759,
+  "IndependentCostArithmeticPassed": true,
+  "QuantileOrderAndScenarioMappingPassed": true
+}

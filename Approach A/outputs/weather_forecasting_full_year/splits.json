@@ -1,0 +1,33 @@
+{
+  "dates": {
+    "train_start": "2019-05-20",
+    "train_end": "2022-02-27",
+    "validation_start": "2022-02-28",
+    "validation_end": "2023-02-27",
+    "test_start": "2023-02-28",
+    "test_end": "2024-02-27",
+    "unseen_demand_day": "2024-02-28"
+  },
+  "delivery_date_timezone": "UTC",
+  "selection_basis": "explicit user request: latest full year test, preceding full year validation, older training",
+  "days": {
+    "train": 1015,
+    "validation": 365,
+    "test": 365
+  },
+  "fractions": {
+    "train": 0.5816618911174785,
+    "validation": 0.20916905444126074,
+    "test": 0.20916905444126074
+  },
+  "boundary_household_file_span_coverage": {
+    "2022-02-27": 173,
+    "2023-02-27": 394
+  },
+  "revision": "full_year_seasonal_coverage",
+  "previous_run_preserved": "outputs/weather_forecasting",
+  "previously_inspected_overlap": "New test overlaps prior weather results; held out from revised fitting/selection, not never inspected",
+  "source": "outputs/preprocessing/audit/target_coverage.csv",
+  "weather_pre_history": "2019-01-01..2019-05-19 is input history, not forecast-label split",
+  "boundary_embargo": "Fit/selection labels must be available by first following-period issue (hourly start + 2h)"
+}

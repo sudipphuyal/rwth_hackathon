@@ -1,0 +1,48 @@
+{
+  "results": {
+    "squared_error": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.25185329912417354,
+        "RMSE": 0.3643381635741996,
+        "WAPE": 82.23059663809782,
+        "Bias": 0.05036453396841665,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 16.91185251226298,
+        "RMSE": 21.922769654508542,
+        "WAPE": 22.144596907527337,
+        "Bias": 12.558391564440457,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1411.93062327407,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "absolute_error": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.2221213621327723,
+        "RMSE": 0.366263359070013,
+        "WAPE": 72.52306083645708,
+        "Bias": -0.05416823388318174,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 17.001531201280848,
+        "RMSE": 23.802422242375677,
+        "WAPE": 22.26202333482477,
+        "Bias": -13.506843762036567,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1390.061222099513,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    }
+  },
+  "chosen_loss": "squared_error",
+  "history_features_withheld": true
+}

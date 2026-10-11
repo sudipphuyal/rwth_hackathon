@@ -1,0 +1,74 @@
+{
+  "config": {
+    "data_dir": "data",
+    "output_dir": "outputs/preprocessing",
+    "behavioral_timezone": "Europe/Berlin",
+    "issue_hour_local": 11,
+    "delivery_timezone": "UTC",
+    "meter_interval_minutes": 15,
+    "meter_latency_minutes": 15,
+    "weather_interval_minutes": 60,
+    "weather_latency_minutes": 60,
+    "heating_base_c": 15.0,
+    "same_slot_lookback_days": 28,
+    "normal_min_valid_days": 28,
+    "normal_min_recent_28_coverage": 0.8,
+    "normal_max_gap_hours": 48.0,
+    "metadata_assumption": "fixed_snapshot_assumed_available_before_all_benchmark_issues"
+  },
+  "raw_target_counts": {
+    "measured": 27663072,
+    "reconstructed": 0,
+    "missing": 517536
+  },
+  "households": 410,
+  "raw_rows": 28180608,
+  "absent_grid_rows_between_file_bounds": 1543680,
+  "identity_checked_rows": 1120416,
+  "reconstruction_households": [],
+  "households_with_any_raw_missing_target": [
+    "114671",
+    "680861",
+    "761079",
+    "7412010",
+    "747511",
+    "768498",
+    "996610",
+    "610891",
+    "816910",
+    "7069411",
+    "778721",
+    "109677",
+    "856765",
+    "884673",
+    "970807",
+    "1001121",
+    "1009851",
+    "1065698"
+  ],
+  "households_with_no_valid_target": [
+    "747511",
+    "768498",
+    "996610",
+    "1065698"
+  ],
+  "materialized_start": "2024-01-31 00:00:00+00:00",
+  "materialized_end": "2024-02-27 00:00:00+00:00",
+  "materialized_rows": 1102080,
+  "columns": 137,
+  "latest_issue_route_counts": {
+    "normal": 378,
+    "sparse_history": 28,
+    "cold_start": 4
+  },
+  "validation": {
+    "duplicate_keys": 0,
+    "after_cutoff_demand_sources": 0,
+    "missing_station_mappings": 0,
+    "invalid_component_identities": 0,
+    "raw_meter_files_modified": 0
+  },
+  "extreme_review_threshold_kwh": 20,
+  "extreme_rows": 2,
+  "maximum_kwh": 66.976
+}

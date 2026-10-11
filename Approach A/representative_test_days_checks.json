@@ -1,0 +1,51 @@
+{
+  "DatesPredefined": [
+    "2023-03-15",
+    "2023-09-05",
+    "2024-02-27"
+  ],
+  "Checks": [
+    {
+      "RequestedDate": "2023-03-15",
+      "DeliveryDate": "2023-03-15",
+      "Substitution": false,
+      "ScoreableIntervals": 96,
+      "ObservedHouseholdsDefinition": "Distinct households with at least one measured target that day",
+      "MinObservedHouseholdsPerInterval": 368,
+      "MaxObservedHouseholdsPerInterval": 368,
+      "PeakMatchedMLTimestampUTC": "2023-03-15 01:30:00+00:00",
+      "PeakMatchedML_kWhPer15min": 158.16078509056732,
+      "ActualAtMatchedMLPeak_kWhPer15min": 187.452,
+      "MatchedPortfolioCrossCheckPassed": true
+    },
+    {
+      "RequestedDate": "2023-09-05",
+      "DeliveryDate": "2023-09-05",
+      "Substitution": false,
+      "ScoreableIntervals": 96,
+      "ObservedHouseholdsDefinition": "Distinct households with at least one measured target that day",
+      "MinObservedHouseholdsPerInterval": 381,
+      "MaxObservedHouseholdsPerInterval": 381,
+      "PeakMatchedMLTimestampUTC": "2023-09-05 00:30:00+00:00",
+      "PeakMatchedML_kWhPer15min": 103.84529613718986,
+      "ActualAtMatchedMLPeak_kWhPer15min": 99.875,
+      "MatchedPortfolioCrossCheckPassed": true
+    },
+    {
+      "RequestedDate": "2024-02-27",
+      "DeliveryDate": "2024-02-27",
+      "Substitution": false,
+      "ScoreableIntervals": 96,
+      "ObservedHouseholdsDefinition": "Distinct households with at least one measured target that day",
+      "MinObservedHouseholdsPerInterval": 374,
+      "MaxObservedHouseholdsPerInterval": 374,
+      "PeakMatchedMLTimestampUTC": "2024-02-27 23:00:00+00:00",
+      "PeakMatchedML_kWhPer15min": 163.37052051533323,
+      "ActualAtMatchedMLPeak_kWhPer15min": 151.46,
+      "MatchedPortfolioCrossCheckPassed": true
+    }
+  ],
+  "SignedErrorDefinition": "100 * (forecast - actual) / actual",
+  "MissingTargetsNotZero": true,
+  "ModelsNotRun": true
+}

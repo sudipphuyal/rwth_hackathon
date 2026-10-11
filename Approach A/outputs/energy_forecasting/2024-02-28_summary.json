@@ -1,0 +1,17 @@
+{
+  "day": "2024-02-28",
+  "active_households": 410,
+  "rows": 39360,
+  "total_daily_kwh": 13014.908665757588,
+  "peak_interval_kwh": 172.94125870786362,
+  "peak_average_kw": 691.7650348314545,
+  "peak_timestamp_utc": "2024-02-28 01:00:00+00:00",
+  "peak_timestamp_local": "2024-02-28 02:00:00+01:00",
+  "actual_demand_available": false,
+  "energy_model_retrained_after_test": false,
+  "forecast_states": {
+    "cold-start": 4,
+    "established": 378,
+    "sparse/new": 28
+  }
+}

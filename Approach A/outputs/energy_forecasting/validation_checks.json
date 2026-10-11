@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "test_days": 365,
+  "scorable_test_days": 364,
+  "test_forecast_rows": 14225856,
+  "zero_actual_support_days": [
+    "2023-10-29"
+  ],
+  "full_portfolio_ground_truth_not_invented": true,
+  "future_demand_poison_tests": [
+    {
+      "Household_ID": "661091",
+      "future_poisoning_invariant": true
+    },
+    {
+      "Household_ID": "676510",
+      "future_poisoning_invariant": true
+    },
+    {
+      "Household_ID": "996610",
+      "future_poisoning_invariant": true
+    }
+  ],
+  "locked_weight_hashes_unchanged": true,
+  "unseen_day_rows": 39360,
+  "unseen_day_households": 410,
+  "no_electricity_refit_after_test": true
+}

@@ -1,0 +1,81 @@
+{
+  "metrics": {
+    "ML": {
+      "Validation": {
+        "N": 29031,
+        "Coverage": 0.8027970100926596,
+        "Width": 34.458953303584956,
+        "IntervalScore": 50.775993020233145
+      },
+      "Test": {
+        "N": 34944,
+        "Coverage": 0.7895776098901099,
+        "Width": 47.572128379250984,
+        "IntervalScore": 70.47545887755427
+      },
+      "TestDaily": {
+        "N": 364,
+        "Coverage": 0.7335164835164835,
+        "Width": 3057.8969226821982,
+        "IntervalScore": 5263.199046040153
+      },
+      "ValidationDaily": {
+        "N": 302,
+        "Coverage": 0.7781456953642384,
+        "Width": 2189.223387554669,
+        "IntervalScore": 3984.6616538856733
+      }
+    },
+    "Blend": {
+      "Validation": {
+        "N": 29031,
+        "Coverage": 0.8113740484309876,
+        "Width": 33.25033741855477,
+        "IntervalScore": 50.13428027177054
+      },
+      "Test": {
+        "N": 34944,
+        "Coverage": 0.7703182234432234,
+        "Width": 45.061943570307264,
+        "IntervalScore": 74.19165684116024
+      },
+      "TestDaily": {
+        "N": 364,
+        "Coverage": 0.7445054945054945,
+        "Width": 2821.294541891117,
+        "IntervalScore": 5326.711241074938
+      },
+      "ValidationDaily": {
+        "N": 302,
+        "Coverage": 0.7847682119205298,
+        "Width": 1946.5295191662901,
+        "IntervalScore": 3357.4971762876507
+      }
+    }
+  },
+  "unseen": {
+    "ML": {
+      "PointDailyEnergy_MWh": 13.01490866575759,
+      "P10DailyEnergy_MWh": 10.47020838018431,
+      "P50DailyEnergy_MWh": 12.38117163410992,
+      "P90DailyEnergy_MWh": 14.681127018351994,
+      "PeakTimestamp": "2024-02-28 01:00:00+00:00",
+      "PeakPoint_kWh": 172.94125870786362,
+      "PeakP90_kWh": 221.24428873251475,
+      "PeakWidth_kWh": 80.55272161105654
+    },
+    "Blend": {
+      "PointDailyEnergy_MWh": 12.714074391100043,
+      "P10DailyEnergy_MWh": 10.959115551945256,
+      "P50DailyEnergy_MWh": 12.641172436282297,
+      "P90DailyEnergy_MWh": 14.443697616449677,
+      "PeakTimestamp": "2024-02-28 19:00:00+00:00",
+      "PeakPoint_kWh": 181.98290694331814,
+      "PeakP90_kWh": 221.87787204646733,
+      "PeakWidth_kWh": 76.5325390676361
+    }
+  },
+  "locked_model_hashes_unchanged": true,
+  "calibration_lock_sha256": "caedc1df4631367919f8bc881f219da8dbf97006e5e4a1de789c8e5a29199ddd",
+  "test_used_for_calibration": false
+}

@@ -1,0 +1,8 @@
+{
+  "rows": 1785052,
+  "normal_rows": 1632820,
+  "extreme_rows_retained": 1,
+  "fit_max_label_timestamp": "2023-02-27 07:45:00+00:00",
+  "training_households": 169,
+  "train_validation_households": 392
+}

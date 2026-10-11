@@ -1,0 +1,8 @@
+Scope,Metric,Improvement %
+Household,MAE,7.666456294942725
+Household,RMSE,16.08728595788923
+Household,WAPE,7.666456294942725
+MatchedPortfolio,MAE,1.208668819709946
+MatchedPortfolio,RMSE,2.794661150968436
+MatchedPortfolio,WAPE,1.208668819709935
+Daily matched energy,MAE,-3.5632076092842135

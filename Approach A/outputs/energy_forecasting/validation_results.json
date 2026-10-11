@@ -1,0 +1,828 @@
+{
+  "full": {
+    "squared_error": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.1818290283581229,
+        "RMSE": 0.2904265982908358,
+        "WAPE": 59.367534751419626,
+        "Bias": 0.0008274011264936877,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 10.82994356141201,
+        "RMSE": 16.695211932034596,
+        "WAPE": 14.180867206879928,
+        "Bias": 0.20631238906892077,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 810.2314233986247,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "absolute_error": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.1643245406810479,
+        "RMSE": 0.307378976413728,
+        "WAPE": 53.65228515756609,
+        "Bias": -0.06863094050611669,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 18.904469720245675,
+        "RMSE": 26.3405319015537,
+        "WAPE": 24.75375547426527,
+        "Bias": -17.11311822823816,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1745.4910706503765,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "baseline_A": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.20689766054608463,
+        "RMSE": 0.380909158942518,
+        "WAPE": 67.55249237907715,
+        "Bias": -0.0011963355613758585,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 10.786454285253845,
+        "RMSE": 16.641295857360973,
+        "WAPE": 14.123921790070955,
+        "Bias": -0.298306153922604,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 714.1793356370622,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "baseline_B": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.21365017804532177,
+        "RMSE": 0.3841391489944546,
+        "WAPE": 69.75720260007648,
+        "Bias": 0.001017020794090155,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 14.459627274742688,
+        "RMSE": 22.93137416642456,
+        "WAPE": 18.933621683377517,
+        "Bias": 0.25359403443247786,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1161.0444986655646,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "baseline_C": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.17091116825187744,
+        "RMSE": 0.3214397183135878,
+        "WAPE": 55.80283199124173,
+        "Bias": -0.06078886575728029,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 20.94735020474912,
+        "RMSE": 30.311786169615917,
+        "WAPE": 27.428729420897064,
+        "Bias": -15.157697665124097,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1917.9631920721727,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_B_0.25": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.1962590973543782,
+        "RMSE": 0.3435495548580288,
+        "WAPE": 64.0789806098515,
+        "Bias": 0.0004636817052236502,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 12.180851946263337,
+        "RMSE": 19.224565917660815,
+        "WAPE": 15.94976399804101,
+        "Bias": 0.11561898734370657,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 947.1071193036269,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_B_0.5": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18989219853831768,
+        "RMSE": 0.32828176493700834,
+        "WAPE": 62.00017564601053,
+        "Bias": -8.965738364285255e-05,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 10.64030304198768,
+        "RMSE": 16.613550905362438,
+        "WAPE": 13.932549474866788,
+        "Bias": -0.022356059745063477,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 779.584012703723,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_B_0.75": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.19265731091825786,
+        "RMSE": 0.3417466129037799,
+        "WAPE": 62.90299026692112,
+        "Bias": -0.0006429964725093568,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 10.08269268379146,
+        "RMSE": 15.656511043278883,
+        "WAPE": 13.202407309497055,
+        "Bias": -0.16033110683383386,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 688.4854916947849,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_C_0.25": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.16976299532452585,
+        "RMSE": 0.3097922405311442,
+        "WAPE": 55.42795127620579,
+        "Bias": -0.045890733208304176,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 16.6632889884156,
+        "RMSE": 24.61782694069385,
+        "WAPE": 21.819124636673305,
+        "Bias": -11.44284978732372,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1490.0604724465993,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_C_0.5": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.17619377894601213,
+        "RMSE": 0.3169887401218406,
+        "WAPE": 57.527614754445956,
+        "Bias": -0.03099260065932806,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 13.14955553670321,
+        "RMSE": 19.869653627623038,
+        "WAPE": 17.218196922087067,
+        "Bias": -7.728001909523348,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1096.3294288411414,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_C_0.75": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18839186495386667,
+        "RMSE": 0.34184116153806743,
+        "WAPE": 61.51031378501997,
+        "Bias": -0.016094468110351964,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 11.009075654802022,
+        "RMSE": 16.88495119305361,
+        "WAPE": 14.415425070865966,
+        "Bias": -4.013154031722976,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 802.4888423112594,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_B_C_0.25": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.17210750005140021,
+        "RMSE": 0.31251503149391086,
+        "WAPE": 56.19343667259389,
+        "Bias": -0.04533739411943769,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 17.964368343281382,
+        "RMSE": 26.57574832541675,
+        "WAPE": 23.52277465593149,
+        "Bias": -11.304874740234954,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1627.725660709006,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_B_C_0.5": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18051321756605038,
+        "RMSE": 0.3211742952403334,
+        "WAPE": 58.93791994442191,
+        "Bias": -0.02988592248159507,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 15.685857728054838,
+        "RMSE": 23.87326947037257,
+        "WAPE": 20.539263589528375,
+        "Bias": -7.4520518153458095,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1387.017335426007,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_B_C_0.75": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.19427019980992785,
+        "RMSE": 0.3461001900461378,
+        "WAPE": 63.429601656703205,
+        "Bias": -0.01443445084375247,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 14.421763992678992,
+        "RMSE": 22.578577662020997,
+        "WAPE": 18.884043015500147,
+        "Bias": -3.599228890456669,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1218.3995820057207,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    }
+  },
+  "ablations": {
+    "G": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.1818290283581229,
+        "RMSE": 0.2904265982908358,
+        "WAPE": 59.367534751419626,
+        "Bias": 0.0008274011264936877,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 10.82994356141201,
+        "RMSE": 16.695211932034596,
+        "WAPE": 14.180867206879928,
+        "Bias": 0.20631238906892077,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 810.2314233986247,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "A": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18404166556559926,
+        "RMSE": 0.2936230615655164,
+        "WAPE": 60.08996514382331,
+        "Bias": -0.0004088258948614372,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 12.329744666425045,
+        "RMSE": 18.74491888051371,
+        "WAPE": 16.1447260383057,
+        "Bias": -0.10194069645461912,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 988.3611029282744,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "B": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.1829159402673212,
+        "RMSE": 0.2927179743645979,
+        "WAPE": 59.72241362375222,
+        "Bias": -0.0011078784275018062,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 11.700901918483412,
+        "RMSE": 17.89496544526083,
+        "WAPE": 15.321311266843388,
+        "Bias": -0.2762493763386974,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 915.4790998485305,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "C": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.1831244515661963,
+        "RMSE": 0.2925999320665825,
+        "WAPE": 59.790492972213855,
+        "Bias": -0.0002049279071251335,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 11.670991108998711,
+        "RMSE": 17.78574655434149,
+        "WAPE": 15.282145668708221,
+        "Bias": -0.0510987533761872,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 909.9235266650716,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "D": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18296985246958597,
+        "RMSE": 0.2924898450826235,
+        "WAPE": 59.740016063639736,
+        "Bias": -0.0003726128520082323,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 11.625979763122162,
+        "RMSE": 17.749265684056954,
+        "WAPE": 15.223207234259439,
+        "Bias": -0.09291097780030513,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 906.5680560188965,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "E": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18315122173943196,
+        "RMSE": 0.292535142999855,
+        "WAPE": 59.79923348633428,
+        "Bias": -0.00044151134441713024,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 11.697683144016574,
+        "RMSE": 17.850691007264295,
+        "WAPE": 15.317096562212264,
+        "Bias": -0.11009081006904421,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 913.4915120336658,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "F": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.1832340747348045,
+        "RMSE": 0.29255794435751437,
+        "WAPE": 59.82628515199215,
+        "Bias": -0.0001926593785772396,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 11.702733185187364,
+        "RMSE": 17.831024505860096,
+        "WAPE": 15.323709150987648,
+        "Bias": -0.04803959699601348,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 912.7671926549225,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "D_plus_recent": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18181834192277277,
+        "RMSE": 0.2903930088927369,
+        "WAPE": 59.36404560929669,
+        "Bias": 0.001036771420041349,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 10.789299924046844,
+        "RMSE": 16.605443575119825,
+        "WAPE": 14.127647906057936,
+        "Bias": 0.2585188510602549,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 807.1460941815767,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "E_plus_recent": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18180992831432352,
+        "RMSE": 0.29040379721059767,
+        "WAPE": 59.36129854961923,
+        "Bias": 0.001013501913007581,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 10.800488896587368,
+        "RMSE": 16.61484668876721,
+        "WAPE": 14.142298890421687,
+        "Bias": 0.25271660178252214,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 807.0249651184062,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "G_extreme_excluded_diagnostic": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18179251180990327,
+        "RMSE": 0.2904602396177577,
+        "WAPE": 59.355612026731464,
+        "Bias": 0.0007128300771710465,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 10.815775968012542,
+        "RMSE": 16.690165942855348,
+        "WAPE": 14.162315978103928,
+        "Bias": 0.17774410925033207,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 807.7970224638548,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "baseline_A": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.20689766054608463,
+        "RMSE": 0.380909158942518,
+        "WAPE": 67.55249237907715,
+        "Bias": -0.0011963355613758585,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 10.786454285253845,
+        "RMSE": 16.641295857360973,
+        "WAPE": 14.123921790070955,
+        "Bias": -0.298306153922604,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 714.1793356370622,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "baseline_B": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.21365017804532177,
+        "RMSE": 0.3841391489944546,
+        "WAPE": 69.75720260007648,
+        "Bias": 0.001017020794090155,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 14.459627274742688,
+        "RMSE": 22.93137416642456,
+        "WAPE": 18.933621683377517,
+        "Bias": 0.25359403443247786,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1161.0444986655646,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "baseline_C": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.17091116825187744,
+        "RMSE": 0.3214397183135878,
+        "WAPE": 55.80283199124173,
+        "Bias": -0.06078886575728029,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 20.94735020474912,
+        "RMSE": 30.311786169615917,
+        "WAPE": 27.428729420897064,
+        "Bias": -15.157697665124097,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1917.9631920721727,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_B_0.25": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.1962590973543782,
+        "RMSE": 0.3435495548580288,
+        "WAPE": 64.0789806098515,
+        "Bias": 0.0004636817052236502,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 12.180851946263337,
+        "RMSE": 19.224565917660815,
+        "WAPE": 15.94976399804101,
+        "Bias": 0.11561898734370657,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 947.1071193036269,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_B_0.5": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18989219853831768,
+        "RMSE": 0.32828176493700834,
+        "WAPE": 62.00017564601053,
+        "Bias": -8.965738364285255e-05,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 10.64030304198768,
+        "RMSE": 16.613550905362438,
+        "WAPE": 13.932549474866788,
+        "Bias": -0.022356059745063477,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 779.584012703723,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_B_0.75": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.19265731091825786,
+        "RMSE": 0.3417466129037799,
+        "WAPE": 62.90299026692112,
+        "Bias": -0.0006429964725093568,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 10.08269268379146,
+        "RMSE": 15.656511043278883,
+        "WAPE": 13.202407309497055,
+        "Bias": -0.16033110683383386,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 688.4854916947849,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_C_0.25": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.16976299532452585,
+        "RMSE": 0.3097922405311442,
+        "WAPE": 55.42795127620579,
+        "Bias": -0.045890733208304176,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 16.6632889884156,
+        "RMSE": 24.61782694069385,
+        "WAPE": 21.819124636673305,
+        "Bias": -11.44284978732372,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1490.0604724465993,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_C_0.5": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.17619377894601213,
+        "RMSE": 0.3169887401218406,
+        "WAPE": 57.527614754445956,
+        "Bias": -0.03099260065932806,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 13.14955553670321,
+        "RMSE": 19.869653627623038,
+        "WAPE": 17.218196922087067,
+        "Bias": -7.728001909523348,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1096.3294288411414,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_A_C_0.75": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18839186495386667,
+        "RMSE": 0.34184116153806743,
+        "WAPE": 61.51031378501997,
+        "Bias": -0.016094468110351964,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 11.009075654802022,
+        "RMSE": 16.88495119305361,
+        "WAPE": 14.415425070865966,
+        "Bias": -4.013154031722976,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 802.4888423112594,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_B_C_0.25": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.17210750005140021,
+        "RMSE": 0.31251503149391086,
+        "WAPE": 56.19343667259389,
+        "Bias": -0.04533739411943769,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 17.964368343281382,
+        "RMSE": 26.57574832541675,
+        "WAPE": 23.52277465593149,
+        "Bias": -11.304874740234954,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1627.725660709006,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_B_C_0.5": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.18051321756605038,
+        "RMSE": 0.3211742952403334,
+        "WAPE": 58.93791994442191,
+        "Bias": -0.02988592248159507,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 15.685857728054838,
+        "RMSE": 23.87326947037257,
+        "WAPE": 20.539263589528375,
+        "Bias": -7.4520518153458095,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1387.017335426007,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    },
+    "blend_B_C_0.75": {
+      "Household": {
+        "n": 8699070,
+        "MAE": 0.19427019980992785,
+        "RMSE": 0.3461001900461378,
+        "WAPE": 63.429601656703205,
+        "Bias": -0.01443445084375247,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "MatchedPortfolio": {
+        "n": 34887,
+        "MAE": 14.421763992678992,
+        "RMSE": 22.578577662020997,
+        "WAPE": 18.884043015500147,
+        "Bias": -3.599228890456669,
+        "ActualEnergy": 2664323.9480000013
+      },
+      "DailyEnergyMAE": 1218.3995820057207,
+      "DailyEnergyMedianAE": null,
+      "EvaluatedDays": 364
+    }
+  },
+  "selected": {
+    "Household": {
+      "n": 8699070,
+      "MAE": 0.18181834192277277,
+      "RMSE": 0.2903930088927369,
+      "WAPE": 59.36404560929669,
+      "Bias": 0.001036771420041349,
+      "ActualEnergy": 2664323.9480000013
+    },
+    "MatchedPortfolio": {
+      "n": 34887,
+      "MAE": 10.789299924046844,
+      "RMSE": 16.605443575119825,
+      "WAPE": 14.127647906057936,
+      "Bias": 0.2585188510602549,
+      "ActualEnergy": 2664323.9480000013
+    },
+    "DailyEnergyMAE": 807.1460941815765,
+    "DailyEnergyMedianAE": 423.76074053360753,
+    "EvaluatedDays": 364
+  },
+  "cold_proxy": {
+    "Household": {
+      "n": 8699070,
+      "MAE": 0.25185329912417354,
+      "RMSE": 0.3643381635741996,
+      "WAPE": 82.23059663809782,
+      "Bias": 0.05036453396841665,
+      "ActualEnergy": 2664323.9480000013
+    },
+    "MatchedPortfolio": {
+      "n": 34887,
+      "MAE": 16.91185251226298,
+      "RMSE": 21.922769654508542,
+      "WAPE": 22.144596907527337,
+      "Bias": 12.558391564440457,
+      "ActualEnergy": 2664323.9480000013
+    },
+    "DailyEnergyMAE": 1411.93062327407,
+    "DailyEnergyMedianAE": null,
+    "EvaluatedDays": 364
+  },
+  "best_baseline": {
+    "Household": {
+      "n": 8699070,
+      "MAE": 0.19265731091825786,
+      "RMSE": 0.3417466129037799,
+      "WAPE": 62.90299026692112,
+      "Bias": -0.0006429964725093568,
+      "ActualEnergy": 2664323.9480000013
+    },
+    "MatchedPortfolio": {
+      "n": 34887,
+      "MAE": 10.08269268379146,
+      "RMSE": 15.656511043278883,
+      "WAPE": 13.202407309497055,
+      "Bias": -0.16033110683383386,
+      "ActualEnergy": 2664323.9480000013
+    },
+    "DailyEnergyMAE": 688.4854916947849,
+    "DailyEnergyMedianAE": 369.6879883408967,
+    "EvaluatedDays": 364
+  },
+  "no_support_days": [
+    "2022-10-30"
+  ]
+}

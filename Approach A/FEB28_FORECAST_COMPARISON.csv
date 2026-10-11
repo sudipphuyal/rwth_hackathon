@@ -1,0 +1,3 @@
+Date,Approach,ForecastHouseholds,DailyPoint_MWh,DailyP10_MWh,DailyP50_MWh,DailyP90_MWh,RidgeHouseholds,PreviousWeekHouseholds,HistoricalProfileHouseholds,PortfolioImputationHouseholds,UncertaintyDefinition,Verification,ActualAvailable
+2024-02-28,A,410,13.014908665757588,10.47020838018431,12.38117163410992,14.681127018351994,,,,,Empirical portfolio daily residual quantiles,saved household forecast verified,False
+2024-02-28,B,410,12.01158,,,,372.0,11.0,23.0,4.0,Split conformal for Ridge household intervals; no portfolio daily bounds saved,latest report-stated total; code eligibility verified; numeric output missing,False

@@ -1,0 +1,51 @@
+{
+  "selected": {
+    "Household": {
+      "n": 8699070,
+      "MAE": 0.18181834192277277,
+      "RMSE": 0.2903930088927369,
+      "WAPE": 59.36404560929669,
+      "Bias": 0.001036771420041349,
+      "ActualEnergy": 2664323.9480000013
+    },
+    "MatchedPortfolio": {
+      "n": 34887,
+      "MAE": 10.789299924046844,
+      "RMSE": 16.605443575119825,
+      "WAPE": 14.127647906057936,
+      "Bias": 0.2585188510602549,
+      "ActualEnergy": 2664323.9480000013
+    },
+    "DailyEnergyMAE": 807.1460941815765,
+    "DailyEnergyMedianAE": 423.76074053360753,
+    "EvaluatedDays": 364
+  },
+  "baseline": {
+    "Household": {
+      "n": 8699070,
+      "MAE": 0.19265731091825786,
+      "RMSE": 0.3417466129037799,
+      "WAPE": 62.90299026692112,
+      "Bias": -0.0006429964725093568,
+      "ActualEnergy": 2664323.9480000013
+    },
+    "MatchedPortfolio": {
+      "n": 34887,
+      "MAE": 10.08269268379146,
+      "RMSE": 15.656511043278883,
+      "WAPE": 13.202407309497055,
+      "Bias": -0.16033110683383386,
+      "ActualEnergy": 2664323.9480000013
+    },
+    "DailyEnergyMAE": 688.4854916947849,
+    "DailyEnergyMedianAE": 369.6879883408967,
+    "EvaluatedDays": 364
+  },
+  "no_support_days": [
+    "2022-10-30"
+  ],
+  "training_only_fit_source_max": "2022-02-27 08:30:00+00:00",
+  "validation_label_cap": "2023-02-27 09:30:00+00:00",
+  "locked_test_weights_unchanged": true,
+  "no_test_targets_used": true
+}

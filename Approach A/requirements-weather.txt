@@ -1,0 +1,4 @@
+-r requirements-preprocessing.txt
+# The weather estimator is already declared in pyproject.toml.
+scikit-learn>=1.8,<1.9
+matplotlib>=3.10,<3.11

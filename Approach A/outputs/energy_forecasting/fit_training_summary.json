@@ -1,0 +1,8 @@
+{
+  "rows": 696914,
+  "normal_rows": 628314,
+  "extreme_rows_retained": 1,
+  "households": 169,
+  "fit_max_label_timestamp": "2022-02-27 08:30:00+00:00",
+  "sample": "deterministic rotating 1/8 plus every flagged extreme"
+}

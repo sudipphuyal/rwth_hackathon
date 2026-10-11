@@ -1,0 +1,5 @@
+Scenario,Description,C_under,C_over,OptimalQuantile
+A,Symmetric,1.0,1.0,0.5
+B,Shortage twice surplus,2.0,1.0,0.6666666666666666
+C,Shortage four times surplus,4.0,1.0,0.8
+D,Surplus twice shortage,1.0,2.0,0.3333333333333333

@@ -1,0 +1,4 @@
+# Standalone Step 2 pipeline; no ML dependency required.
+pandas>=2.2,<3
+numpy>=1.26,<3
+pyarrow>=17,<26

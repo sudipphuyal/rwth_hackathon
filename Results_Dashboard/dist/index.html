@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day Ahead Residential Energy Forecasting — Results</title>
+  <meta name="description" content="Local results explorer for two residential electricity forecasting approaches, their evaluation, uncertainty and purchasing scenarios.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%23132940'/%3E%3Cpath d='M4 23L10 17L15 20L21 7L28 12' fill='none' stroke='%23ffffff' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div><p class="eyebrow">Project results explorer</p><h1>Day Ahead Residential Energy Forecasting</h1><p class="subtitle">Comparative Modelling and Portfolio Prediction</p></div>
+      <div class="project-scope"><strong>410 households</strong><span>96 intervals per UTC day</span><span>Final target: 28 February 2024</span></div>
+    </div>
+  </header>
+  <nav class="navigation" aria-label="Results sections">
+    <div class="nav-inner" role="tablist">
+      <button id="tab-overview" role="tab" aria-controls="overview" aria-selected="true" data-tab="overview">Overview</button>
+      <button id="tab-approaches" role="tab" aria-controls="approaches" aria-selected="false" data-tab="approaches">Data & approaches</button>
+      <button id="tab-performance" role="tab" aria-controls="performance" aria-selected="false" data-tab="performance">Test results</button>
+      <button id="tab-features" role="tab" aria-controls="features" aria-selected="false" data-tab="features">Features & weather</button>
+      <button id="tab-uncertainty" role="tab" aria-controls="uncertainty" aria-selected="false" data-tab="uncertainty">Uncertainty</button>
+      <button id="tab-purchasing" role="tab" aria-controls="purchasing" aria-selected="false" data-tab="purchasing">Purchasing & P80</button>
+      <button id="tab-evidence" role="tab" aria-controls="evidence" aria-selected="false" data-tab="evidence">Evidence</button>
+    </div>
+  </nav>
+  <main>
+    <div id="load-status" role="status" hidden></div>
+    <section id="overview" role="tabpanel" aria-labelledby="tab-overview">
+      <div class="section-heading"><div><p class="eyebrow">Measured performance and final outputs</p><h2>What the project achieved</h2></div><p>Approach A has an annual test. Approach B has three reported historical days.</p></div>
+      <div class="headline-grid">
+        <article class="headline"><p>Household mean absolute error</p><strong>7.67% lower</strong><span>Approach A versus its lag benchmark</span><small>0.173 versus 0.187 kWh per interval</small></article>
+        <article class="headline"><p>Portfolio quarter-hour error</p><strong>14.29% WAPE</strong><span>Benchmark: 14.47%</span><small>Weighted absolute percentage error</small></article>
+        <article class="headline"><p>28 February demand forecast</p><strong>13.015 <small>MWh</small></strong><span>Approach A, all 410 households</span><small>Approach B: 12.012 MWh</small></article>
+      </div>
+      <div class="plot-heading"><div><h3>Approach A: actual versus predicted daily demand</h3><p>Frozen test, 28 February 2023 to 27 February 2024. Identical measured household support within each comparison.</p></div></div>
+      <div class="legend" id="overview-legend"></div><div id="overview-chart" class="chart" aria-label="Actual, Approach A forecast and lag benchmark daily energy"></div>
+      <p class="chart-caption">364 scored days. No measurements exist for 29 October 2023, so that date remains a gap. Daily totals are in megawatt-hours (MWh).</p>
+      <div class="outcome-grid">
+        <article><h3>Forecasting outcome</h3><p>A reduced household errors, while portfolio improvement was modest. Daily-total mean absolute error was <strong>worse</strong>: 1.148 MWh versus 1.109 MWh for the lag benchmark.</p><button class="text-link" data-open="performance">Explore the test results</button></article>
+        <article><h3>Purchasing outcome</h3><p>Under assumed 4:1 shortage-to-surplus penalties, A’s interval P80 purchases total <strong>14.998 MWh</strong>. Historical simulated penalty fell <strong>24.09%</strong> against buying A’s point forecast.</p><button class="text-link" data-open="purchasing">Understand the quantities and assumptions</button></article>
+      </div>
+      <p class="disclosure">Final-day actual demand and actual tariffs are unavailable. Historical simulated penalty reduction does not establish final-day savings.</p>
+    </section>
+    <section id="approaches" role="tabpanel" aria-labelledby="tab-approaches" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Inputs, missing data and model fitting</p><h2>Two approaches to the same forecast task</h2></div></div>
+      <div class="data-strip"><div><strong>28,180,608</strong><span>supplied meter rows</span></div><div><strong>8</strong><span>weather stations</span></div><div><strong>4</strong><span>homes without usable Total history</span></div><div><strong>0</strong><span>targets actually reconstructed</span></div></div>
+      <div class="comparison-grid">
+        <article class="method"><h3><span class="series-label a">A</span> Weather and household context</h3><ol class="method-steps"><li><strong>Validate the supplied data</strong><p>Parse timestamps and numeric readings, enforce unique household/time keys and check Total = HeatPump + Other. Retain measured zeros and extremes.</p></li><li><strong>Handle missing observations</strong><p>Leave missing targets unfilled. Reconstruct Total only when both components are valid; that filled zero rows here. Keep unknown inputs with missing indicators. Use a separate history-free model for four homes.</p></li><li><strong>Build features</strong><p>Forecast temperature, humidity and sunshine. Add available day/week lags, seven- and twenty-eight-day behaviour, calendar features, building and heating context.</p></li><li><strong>Fit and select the model</strong><p>Global histogram-based gradient boosting. Validation selects the configuration. Refit on eligible training and validation rows, then freeze model weights for the test.</p></li></ol><div class="method-config">80 boosting iterations · learning rate 0.07 · 15 leaves · minimum 200 samples per leaf · L2 regularization 2</div></article>
+        <article class="method"><h3><span class="series-label b">B</span> Recurring consumption patterns</h3><ol class="method-steps"><li><strong>Clean observed records</strong><p>Drop invalid timestamps or targets, sort observations and retain the first duplicate. Reindex a regular UTC grid and leave gaps missing.</p></li><li><strong>Keep usable learning rows</strong><p>Exclude rows without all required lags and targets. Eligible homes need at least 1,344 complete training rows before calibration, 1,344 complete calibration rows and all 96 future day/week lag pairs.</p></li><li><strong>Fit a compact model</strong><p>Standardize inputs and fit global Ridge regression for each target date with penalty strength 1. Features are previous-day and previous-week demand plus sine/cosine representations of time and weekday.</p></li><li><strong>Calibrate and route fallbacks</strong><p>Reserve the preceding fourteen days for uncertainty calibration. Use week, day, historical-slot or portfolio profiles when Ridge eligibility fails.</p></li></ol><div class="method-config">Final routing: 372 Ridge · 11 prior-week · 23 historical profiles · 4 portfolio profiles</div></article>
+      </div>
+      <h3>Approach A: chronological evaluation</h3><div class="timeline"><div><span>Training</span><strong>20 May 2019 – 27 Feb 2022</strong></div><div><span>Validation</span><strong>28 Feb 2022 – 27 Feb 2023</strong></div><div><span>Frozen test</span><strong>28 Feb 2023 – 27 Feb 2024</strong></div><div><span>Final forecast</span><strong>28 Feb 2024</strong></div></div>
+      <details><summary>Data gaps, information cutoffs and modelling assumptions</summary><div class="details-body"><p>The supplied rows contain 517,536 missing Total readings. Another 1,543,680 expected timestamps are absent within file bounds. These are separate counts. Seventeen households have no survey row.</p><p>A issues at 11:00 Europe/Berlin on the previous day, with assumed meter and weather arrival delays. B uses the complete preceding UTC day. Their information cutoffs differ. Undated survey information is assumed available throughout the benchmark.</p><p>Direct photovoltaic generation, electric-vehicle charging schedules and procurement prices are absent. The target is received Total electricity, interpreted as grid import. A uses missing indicators and unknown categories instead of treating missing demand as zero.</p></div></details>
+      <p class="source-caption">Sources: preprocessing report, locked A model configuration and supplied B source code. See Evidence for the exact files.</p>
+    </section>
+    <section id="performance" role="tabpanel" aria-labelledby="tab-performance" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Errors, load shape and reported day totals</p><h2>Historical test performance</h2></div><p>Lower error is better. Every paired A score uses the same measured support.</p></div>
+      <div id="annual-metric-grid" class="metric-grid"></div>
+      <div class="plot-heading"><div><h3>Variation within a reported test day</h3><p>Raw quarter-hour energy. No smoothing or synthetic measurements.</p></div><label class="control-label" for="test-day">Test day<select id="test-day"><option value="2023-03-15">15 March 2023</option><option value="2023-09-05">5 September 2023</option><option value="2024-02-27" selected>27 February 2024</option></select></label></div>
+      <div id="day-summary" class="selected-summary" aria-live="polite"></div><div class="legend" id="day-legend"></div><div id="day-chart" class="chart"></div><div id="residual-chart" class="chart compact-chart"></div>
+      <h3>All reported historical comparison rows</h3><div class="table-wrap"><table id="historical-table"><thead><tr><th>Date</th><th>Approach</th><th>Measured homes</th><th>Actual MWh</th><th>Forecast MWh</th><th>Signed error</th><th>Absolute error MWh</th></tr></thead><tbody></tbody></table></div>
+      <p class="disclosure">B’s rows reproduce the final report. Household sets and issue cutoffs differ, and no comparable full-year B test was supplied. These rows cannot establish a controlled A-versus-B ranking.</p>
+      <details><summary>Metric definitions and the benchmark</summary><div class="details-body"><p><strong>MAE:</strong> mean absolute error, the average size of a prediction error. <strong>RMSE:</strong> root mean squared error, which gives larger errors more weight. <strong>WAPE:</strong> weighted absolute percentage error, the sum of absolute errors divided by the sum of measured energy.</p><p>A’s main benchmark is 75% previous-available matching local-slot demand plus 25% previous-week matching local-slot demand. This lag blend is separate from Approach B’s Ridge model.</p><p>Signed daily error = (forecast − actual) ÷ actual × 100. Positive means overprediction. Residual = forecast − actual at each interval. A near-correct daily total can still hide errors in the timing of demand.</p></div></details>
+    </section>
+    <section id="features" role="tabpanel" aria-labelledby="tab-features" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Validation decisions and upstream forecast errors</p><h2>Features, model choices and weather</h2></div></div>
+      <h3>Approach A: validation feature study</h3><p>Portfolio weighted absolute percentage error. Lower values indicate smaller aggregate interval error.</p><div id="feature-chart" class="chart"></div>
+      <p class="chart-caption">Recent behaviour improved the chosen contextual model. Adding explicit photovoltaic ownership did not improve that configuration. Feature-group results are predictive comparisons, not causal estimates.</p>
+      <div class="outcome-grid"><article><h3>Selected configuration</h3><p>105 columns, including missing indicators. Recent demand, predicted weather and building/heating context form the main model. Photovoltaic and electric-vehicle ownership remain inputs to the separate history-free model.</p></article><article><h3>A serious benchmark</h3><p>The lag blend reached <strong>13.20% validation WAPE</strong>, better than A’s selected contextual model at <strong>14.13%</strong>. On the annual test, their order reverses slightly.</p></article></div>
+      <h3>Selected weather forecast: held-out mean absolute error</h3><div id="weather-grid" class="metric-grid three"></div>
+      <details><summary>Weather procedure and additional modelling choices</summary><div class="details-body"><p>Temperature and humidity use histogram-based gradient boosting. Sunshine uses the latest available matching hour, selected on validation. The demand model uses these forecasts rather than the future observed weather.</p><p>For demand, squared-error loss retained aggregate volume better than absolute-error loss, which underpredicted portfolio demand. Robust recent profiles, feature groups and extreme-reading sensitivity were assessed on validation. Large measured targets were retained.</p><p>The B description reports experiments with alternative trees and clustering without stable gains, but saved experiment outputs were not supplied for independent reproduction.</p></div></details>
+    </section>
+    <section id="uncertainty" role="tabpanel" aria-labelledby="tab-uncertainty" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Estimated ranges and observed coverage</p><h2>How certain were the forecasts?</h2></div></div>
+      <div class="coverage-grid"><article><h3>A: measured portfolio quarter-hours</h3><div class="coverage-value">79.0%</div><div class="coverage-track"><span style="width:78.9578%"></span><i style="left:80%" aria-label="80% nominal target"></i></div><p>Observed P10–P90 test coverage. Nominal target: 80%.</p></article><article><h3>A: measured daily totals</h3><div class="coverage-value">73.4%</div><div class="coverage-track"><span style="width:73.3516%"></span><i style="left:80%" aria-label="80% nominal target"></i></div><p>Daily coverage is lower and needs better calibration.</p></article><article><h3>B: Ridge household intervals</h3><div class="coverage-value">80% nominal</div><p>Fourteen-day conformal calibration. No measured test coverage or full-portfolio daily bounds were supplied.</p></article></div>
+      <h3>Approach A: 28 February daily quantities</h3><div id="daily-quantiles-chart" class="chart compact-chart"></div>
+      <div class="comparison-grid"><article><h3>What P10, P50 and P90 mean</h3><p>P stands for percentile. P50 is the median of estimated demand. The P10–P90 range targets the middle 80% of modelled outcomes. The model point forecast is a separate estimate and need not equal P50.</p></article><article><h3>How A estimated the range</h3><p>A used validation prediction errors, scaled to forecast demand and conditioned on temperature where supported. Daily calibration uses complete daily error blocks. Four unobserved homes add provisional proxy uncertainty.</p></article></div>
+      <p class="disclosure">These are model-based estimates, not guaranteed probabilities. Test coverage applies to measured matched support, not verified ground truth for all 410 households. Individual interval coverage does not guarantee that every interval in a day is covered.</p>
+    </section>
+    <section id="purchasing" role="tabpanel" aria-labelledby="tab-purchasing" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Conditional decision support</p><h2>From a demand forecast to a purchase quantity</h2></div><p>Actual tariffs were unavailable. All penalties below are assumed units per kWh.</p></div>
+      <div class="controls">
+        <label class="control-label" for="purchase-model">Forecast method<select id="purchase-model"><option value="ML">Approach A (machine learning)</option><option value="Blend">Lag blend benchmark</option></select></label>
+        <label class="control-label" for="purchase-ratio">Assumed shortage : surplus penalty<select id="purchase-ratio"><option value="A">1:1 — same penalty</option><option value="B">2:1 — shortage costs twice</option><option value="C" selected>4:1 — shortage costs four times</option><option value="D">1:2 — surplus costs twice</option></select></label>
+        <label class="control-label" for="purchase-level">Settlement objective<select id="purchase-level"><option value="Quarter-hour">Each 15-minute interval</option><option value="Daily">Net daily total</option></select></label>
+      </div>
+      <div id="purchase-headlines" class="headline-grid" aria-live="polite"></div>
+      <div id="policy-explanation" class="policy-explanation" aria-live="polite"></div>
+      <div class="plot-heading"><div><h3 id="purchase-chart-title">28 February interval purchases</h3><p id="purchase-chart-description"></p></div></div><div class="legend" id="purchase-legend"></div><div id="purchase-chart" class="chart"></div>
+      <div class="p80-explainer"><h3>Why the cost ratio chooses this percentile</h3><div class="balance-layout"><div><p id="balance-intro"></p><div class="probability-strip" id="probability-strip"></div><div id="balance-values" class="balance-values"></div></div><div><p><strong>The cost ratio chooses the percentile.</strong> It balances the expected avoided shortage penalty against the expected added surplus penalty from a small extra purchase.</p><p><strong>The validation errors determine the amount.</strong> For each forecast, A scales historical errors to that demand estimate and finds the selected percentile. It does not multiply the forecast by 80%.</p></div></div></div>
+      <div id="interval-example" class="worked-example"></div>
+      <h3>Historical evidence for the selected policy</h3><div id="cost-chart" class="chart compact-chart"></div><p id="cost-details" class="chart-caption"></p>
+      <h3>All assumptions and final-day purchase quantities</h3><div class="table-wrap"><table id="procurement-table"><thead><tr><th>Method</th><th>Penalty ratio</th><th>Percentile</th><th>Forecast MWh</th><th>Daily purchase MWh</th><th>Sum of interval purchases MWh</th><th>Historical interval penalty change</th></tr></thead><tbody></tbody></table></div>
+      <details open><summary>Why 14.011 MWh and 14.998 MWh are different</summary><div class="details-body"><p><strong>14.011 MWh</strong> is the separately calibrated P80 for the whole-day net-demand objective. <strong>14.998 MWh</strong> adds ninety-six interval P80 quantities, charging shortages and surpluses separately at each interval.</p><p>A daily percentile generally differs from a sum of interval percentiles. Different times can offset each other under net daily settlement. Their historical penalty reductions also differ: <strong>26.22% daily</strong> and <strong>24.09% interval</strong> for Approach A under 4:1.</p><p>The 14.998 MWh schedule total does not carry an 80% probability of covering the whole day. It sums marginal interval decisions.</p></div></details>
+      <p class="disclosure">“Optimal” here refers to expected linear imbalance penalty under the estimated demand distribution and assumed constant costs. Purchase prices, fees, market constraints and real execution were not modelled. No method or ratio was selected from test results. Final-day actuals are absent, so final-day savings are unknown.</p>
+    </section>
+    <section id="evidence" role="tabpanel" aria-labelledby="tab-evidence" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Traceable numbers and practical limits</p><h2>Evidence and interpretation</h2></div></div>
+      <div class="comparison-grid"><article><h3>Supported outcomes</h3><ul><li>A improves annual household error against its validation-selected lag benchmark.</li><li>Both approaches produce a final forecast for all 410 homes.</li><li>A provides validation-calibrated demand quantiles and a fixed cost-ratio rule.</li><li>The same 4:1 interval rule lowers retrospective simulated penalty by 24.09% against A’s point-forecast purchasing.</li></ul></article><article><h3>Limits that affect the conclusion</h3><ul><li>B lacks an equivalent annual test and saved household predictions for common-support comparison.</li><li>Four homes lack measured Total demand history. Their forecast accuracy and uncertainty are unverified.</li><li>Daily coverage falls below the nominal target. Survey metadata has no historical effective dates.</li><li>There are no supplied actual prices or 28 February demand measurements.</li></ul></article></div>
+      <h3>Sources by result</h3><div id="source-list" class="source-list"></div>
+      <details><summary>Approach B historical provenance</summary><div class="details-body"><p>The final report uses 294, 374 and 371 measured B homes on the three reported dates. The updated B description lists different complete-profile counts. The present B script only computes historical metrics when all 410 actual profiles exist. The published subsets cannot be reproduced independently from a supplied B prediction export.</p></div></details>
+      <h3>Full forms and units</h3><dl class="glossary"><dt>kWh</dt><dd>Kilowatt-hour, electricity energy.</dd><dt>MWh</dt><dd>Megawatt-hour, equal to 1,000 kWh.</dd><dt>UTC</dt><dd>Coordinated Universal Time. Each target day here has 96 intervals.</dd><dt>MAE</dt><dd>Mean absolute error.</dd><dt>RMSE</dt><dd>Root mean squared error.</dd><dt>WAPE</dt><dd>Weighted absolute percentage error.</dd><dt>P80</dt><dd>80th percentile of estimated demand. A quantity, rather than 80% of a forecast.</dd><dt>ML</dt><dd>Machine learning. In the procurement files it means Approach A.</dd><dt>PV / EV</dt><dd>Photovoltaic generation / electric vehicle.</dd></dl>
+      <p class="source-caption">The dashboard reads a frozen snapshot of the supplied project outputs. It does not train models or send purchases.</p>
+    </section>
+  </main>
+  <footer><span>Day Ahead Residential Energy Forecasting</span><span>Local results snapshot · all figures tied to project outputs</span></footer>
+  <div id="chart-tooltip" class="chart-tooltip" role="tooltip" hidden></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

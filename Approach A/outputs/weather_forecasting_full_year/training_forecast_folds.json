@@ -1,0 +1,50 @@
+[
+  {
+    "start": "2019-05-20",
+    "end_exclusive": "2020-01-01",
+    "fit_cutoff": "2019-05-19 07:00:00+00:00",
+    "fit_source_max": null,
+    "rows": 43392,
+    "mode": "warmup_causal_baseline"
+  },
+  {
+    "start": "2020-01-01",
+    "end_exclusive": "2020-07-01",
+    "fit_cutoff": "2019-12-31 08:00:00+00:00",
+    "fit_source_max": "2019-12-31 08:00:00+00:00",
+    "rows": 34944,
+    "mode": "expanding_half_year_oof"
+  },
+  {
+    "start": "2020-07-01",
+    "end_exclusive": "2021-01-01",
+    "fit_cutoff": "2020-06-30 07:00:00+00:00",
+    "fit_source_max": "2020-06-30 07:00:00+00:00",
+    "rows": 35328,
+    "mode": "expanding_half_year_oof"
+  },
+  {
+    "start": "2021-01-01",
+    "end_exclusive": "2021-07-01",
+    "fit_cutoff": "2020-12-31 08:00:00+00:00",
+    "fit_source_max": "2020-12-31 08:00:00+00:00",
+    "rows": 34752,
+    "mode": "expanding_half_year_oof"
+  },
+  {
+    "start": "2021-07-01",
+    "end_exclusive": "2022-01-01",
+    "fit_cutoff": "2021-06-30 07:00:00+00:00",
+    "fit_source_max": "2021-06-30 07:00:00+00:00",
+    "rows": 35328,
+    "mode": "expanding_half_year_oof"
+  },
+  {
+    "start": "2022-01-01",
+    "end_exclusive": "2022-02-28",
+    "fit_cutoff": "2021-12-31 08:00:00+00:00",
+    "fit_source_max": "2021-12-31 08:00:00+00:00",
+    "rows": 11136,
+    "mode": "expanding_half_year_oof"
+  }
+]

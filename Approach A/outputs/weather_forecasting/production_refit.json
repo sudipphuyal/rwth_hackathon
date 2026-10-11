@@ -1,0 +1,12 @@
+{
+  "same_locked_methods": {
+    "Temperature_avg_hourly": "hist_gradient_boosting",
+    "Sunshine_duration_hourly": "same_hour_7d_median",
+    "Humidity_avg_hourly": "hist_gradient_boosting"
+  },
+  "issue": "2024-02-27 10:00:00+00:00",
+  "weather_cutoff": "2024-02-27 08:00:00+00:00",
+  "max_fit_label_timestamp": "2024-02-27 08:00:00+00:00",
+  "actual_2024_02_28_weather_used": false,
+  "test_predictions_regenerated_with_production_model": false
+}

@@ -1,0 +1,10 @@
+Group,Value,Households,DailyEnergyKWh
+Installation_HasPVSystem,False,114,3965.718347636417
+Installation_HasPVSystem,True,131,3550.1814733463098
+Installation_HasPVSystem,Unknown,165,5499.008844774861
+Survey_HeatPump_Installation_Type,Unknown,19,664.765006146346
+Survey_HeatPump_Installation_Type,air-source,235,7741.3365511573065
+Survey_HeatPump_Installation_Type,ground-source,156,4608.807108453937
+ForecastState,cold-start,4,148.06894847744317
+ForecastState,established,378,12306.297604982385
+ForecastState,sparse/new,28,560.5421122977605

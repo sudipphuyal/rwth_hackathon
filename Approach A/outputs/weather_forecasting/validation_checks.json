@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "historical_forecast_rows": 335040,
+  "next_day_rows": 192,
+  "stations": 8,
+  "24_hour_grid": true,
+  "after_cutoff_source_violations": 0,
+  "out_of_time_fit_violations": 0,
+  "actual_weather_in_deployable_table": false,
+  "unavailable_sunshine_preserved": true,
+  "unchanged_lock_sha256": "e620a27f7ca57687b15d3b74b18fa2c444c858e64a2a7614a52dfc4a743c963a",
+  "assigned_station_energy_join_rows": 2688,
+  "real_station_future_poison_tests": [
+    {
+      "station": "8jB",
+      "future_poisoning_invariant": true
+    },
+    {
+      "station": "HbsbG",
+      "future_poisoning_invariant": true
+    }
+  ],
+  "test_evaluated_only_after_selection": true
+}

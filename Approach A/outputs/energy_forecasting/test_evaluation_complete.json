@@ -1,0 +1,76 @@
+{
+  "selected": {
+    "Household": {
+      "n": 13320864,
+      "MAE": 0.17285966218475016,
+      "RMSE": 0.2847054595687183,
+      "WAPE": 61.43970705329849,
+      "Bias": 0.0010357889258592946,
+      "ActualEnergy": 3747804.4110000012
+    },
+    "MatchedPortfolio": {
+      "n": 34944,
+      "MAE": 15.33082240079752,
+      "RMSE": 21.825896400507137,
+      "WAPE": 14.29424268782815,
+      "Bias": 0.3948489988003016,
+      "ActualEnergy": 3747804.411000001
+    },
+    "DailyEnergyMAE": 1148.0899016891983,
+    "DailyEnergyMedianAE": 706.6678983362222,
+    "EvaluatedDays": 364
+  },
+  "baseline": {
+    "Household": {
+      "n": 13320864,
+      "MAE": 0.18721220398181504,
+      "RMSE": 0.3392876309850277,
+      "WAPE": 66.5410473679603,
+      "Bias": 0.000992438858660732,
+      "ActualEnergy": 3747804.4110000012
+    },
+    "MatchedPortfolio": {
+      "n": 34944,
+      "MAE": 15.518388321764192,
+      "RMSE": 22.45339264174026,
+      "WAPE": 14.469126508419805,
+      "Bias": 0.37832369117830905,
+      "ActualEnergy": 3747804.411000001
+    },
+    "DailyEnergyMAE": 1108.5885887395734,
+    "DailyEnergyMedianAE": 676.3637409064977,
+    "EvaluatedDays": 364
+  },
+  "cold_proxy_all_history_withheld": {
+    "Household": {
+      "n": 13320864,
+      "MAE": 0.2240597790385537,
+      "RMSE": 0.3354817776471566,
+      "WAPE": 79.63782303266582,
+      "Bias": 0.0183434683663007,
+      "ActualEnergy": 3747804.4110000012
+    },
+    "MatchedPortfolio": {
+      "n": 34944,
+      "MAE": 18.110342305031615,
+      "RMSE": 23.173061109017272,
+      "WAPE": 16.885827863630865,
+      "Bias": 6.992641008350327,
+      "ActualEnergy": 3747804.411000001
+    },
+    "DailyEnergyMAE": 1366.0511689594366,
+    "DailyEnergyMedianAE": null,
+    "EvaluatedDays": 364
+  },
+  "frozen_weights_sha256": {
+    "locked_cold.pkl": "238de760b841fc2f0941a4b35eda9bc63fbdeaba8a79aca74fff15b9b204c4ae",
+    "locked_primary.pkl": "19c2d7d76cec2fa9d0e62c216648068bcd6cb4a472024feea5008cc9adc890d0"
+  },
+  "days": 365,
+  "matched_support_only": true,
+  "full_actual_unknown_intervals": 35040,
+  "test_days_without_any_actual_support": [
+    "2023-10-29"
+  ],
+  "daily_accuracy_policy": "No matched support => NaN actual/error and excluded daily score; forecasts retained"
+}

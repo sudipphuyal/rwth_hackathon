@@ -1,0 +1,11 @@
+Approach,Evaluation,Metric,Value,Unit,Verification
+A,Frozen full-year TEST 2023-02-28 to 2024-02-27,Portfolio WAPE,14.29424268782815,%,frozen evaluation
+A persistence,Same A full-year TEST,Portfolio WAPE,14.469126508419805,%,frozen evaluation
+A,Same A full-year TEST,Household MAE improvement vs persistence,7.666456294942725,%,frozen evaluation
+A,Same A full-year TEST,Household RMSE improvement vs persistence,16.08728595788923,%,frozen evaluation
+A weather,Frozen full-year TEST,Temperature MAE,2.504353660753465,deg C,frozen evaluation
+A,Same A full-year TEST,P10-P90 portfolio interval coverage,78.95776098901099,%,frozen evaluation
+A,Same A full-year TEST,P10-P90 daily coverage,73.35164835164835,%,frozen evaluation
+B,2023-03-15; 294 observed homes,Signed daily error,-12.64,%,User-supplied historical evaluation
+B,2023-09-05; 374 observed homes,Signed daily error,41.74,%,User-supplied historical evaluation
+B,2024-02-27; 371 observed homes,Signed daily error,-0.38,%,User-supplied historical evaluation

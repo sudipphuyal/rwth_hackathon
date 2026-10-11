@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "locked_models_unchanged": true,
+  "calibration_lock_unchanged": true,
+  "unseen_point_exactly_preserved": true,
+  "test_scored_intervals_per_method": 34944,
+  "unseen_households": 410,
+  "unseen_intervals": 96
+}

@@ -1,0 +1,550 @@
+{
+  "Household_ID": {
+    "dtype": "object",
+    "role": "identifier"
+  },
+  "TargetTimestamp": {
+    "dtype": "datetime64[ns, UTC]",
+    "role": "identifier"
+  },
+  "ForecastIssueTimestamp": {
+    "dtype": "datetime64[s, UTC]",
+    "role": "identifier"
+  },
+  "ForecastCutoffTimestamp": {
+    "dtype": "datetime64[ns, UTC]",
+    "role": "identifier"
+  },
+  "LocalQuarterHourSlot": {
+    "dtype": "int32",
+    "role": "candidate_feature"
+  },
+  "LocalHour": {
+    "dtype": "int32",
+    "role": "candidate_feature"
+  },
+  "LocalWeekday": {
+    "dtype": "int32",
+    "role": "candidate_feature"
+  },
+  "LocalWeekend": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "LocalMonth": {
+    "dtype": "int32",
+    "role": "candidate_feature"
+  },
+  "LocalDayOfYear": {
+    "dtype": "int32",
+    "role": "candidate_feature"
+  },
+  "HourSin": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "HourCos": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "DayOfYearSin": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "DayOfYearCos": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "LocalUTCOffsetMinutes": {
+    "dtype": "int64",
+    "role": "candidate_feature"
+  },
+  "ForecastLeadHours": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "HistoryObservedIntervals": {
+    "dtype": "int64",
+    "role": "candidate_feature"
+  },
+  "HistoryExpectedIntervals": {
+    "dtype": "int64",
+    "role": "candidate_feature"
+  },
+  "HistoryMissingRate": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "HistoryValidDays": {
+    "dtype": "int64",
+    "role": "candidate_feature"
+  },
+  "GapAgeHours": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent7dCoverage": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent28dCoverage": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "ForecastRoute": {
+    "dtype": "object",
+    "role": "diagnostic"
+  },
+  "DemandHistorySourceMaxTimestamp": {
+    "dtype": "datetime64[ns, UTC]",
+    "role": "lineage"
+  },
+  "HistoricalHouseholdBaseline": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent7dMean": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent7dMedian": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent28dMean": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent28dMedian": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent7dNightMean": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent7dNightCount": {
+    "dtype": "int64",
+    "role": "candidate_feature"
+  },
+  "Recent7dDayMean": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent7dDayCount": {
+    "dtype": "int64",
+    "role": "candidate_feature"
+  },
+  "Recent7dEveningMean": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent7dEveningCount": {
+    "dtype": "int64",
+    "role": "candidate_feature"
+  },
+  "Recent7dPeak": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent7dP95": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "RecentChangeRatio": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Recent7dZeroFraction": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "PreviousAvailableSameInterval": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "LagAvailableSourceMaxTimestamp": {
+    "dtype": "datetime64[ns, UTC]",
+    "role": "lineage"
+  },
+  "PreviousAvailableSameIntervalAgeHours": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "PreviousWeekSameLocalInterval": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "LagWeekSourceMaxTimestamp": {
+    "dtype": "datetime64[ns, UTC]",
+    "role": "lineage"
+  },
+  "RecentSameSlot28dMedian": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "RecentSameSlot28dCount": {
+    "dtype": "int64",
+    "role": "candidate_feature"
+  },
+  "SameSlotSourceMaxTimestamp": {
+    "dtype": "datetime64[ns, UTC]",
+    "role": "lineage"
+  },
+  "HistoricalWeatherCutoffTimestamp": {
+    "dtype": "datetime64[ns, UTC]",
+    "role": "identifier"
+  },
+  "Historical24h_Temperature_avg_hourly": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Historical24h_Temperature_avg_hourly_coverage": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Forecast_Temperature_avg_hourly": {
+    "dtype": "float64",
+    "role": "reserved_unavailable_weather"
+  },
+  "Forecast_Temperature_avg_hourly_missing": {
+    "dtype": "bool",
+    "role": "reserved_unavailable_weather"
+  },
+  "Historical24h_Humidity_avg_hourly": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Historical24h_Humidity_avg_hourly_coverage": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Forecast_Humidity_avg_hourly": {
+    "dtype": "float64",
+    "role": "reserved_unavailable_weather"
+  },
+  "Forecast_Humidity_avg_hourly_missing": {
+    "dtype": "bool",
+    "role": "reserved_unavailable_weather"
+  },
+  "Historical24h_Precipitation_total_hourly": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Historical24h_Precipitation_total_hourly_coverage": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Forecast_Precipitation_total_hourly": {
+    "dtype": "float64",
+    "role": "reserved_unavailable_weather"
+  },
+  "Forecast_Precipitation_total_hourly_missing": {
+    "dtype": "bool",
+    "role": "reserved_unavailable_weather"
+  },
+  "Historical24h_Sunshine_duration_hourly": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Historical24h_Sunshine_duration_hourly_coverage": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Forecast_Sunshine_duration_hourly": {
+    "dtype": "float64",
+    "role": "reserved_unavailable_weather"
+  },
+  "Forecast_Sunshine_duration_hourly_missing": {
+    "dtype": "bool",
+    "role": "reserved_unavailable_weather"
+  },
+  "Historical24h_WindSpeed_hourly": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Historical24h_WindSpeed_hourly_coverage": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Forecast_WindSpeed_hourly": {
+    "dtype": "float64",
+    "role": "reserved_unavailable_weather"
+  },
+  "Forecast_WindSpeed_hourly_missing": {
+    "dtype": "bool",
+    "role": "reserved_unavailable_weather"
+  },
+  "Historical24h_DewPoint_hourly": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Historical24h_DewPoint_hourly_coverage": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Forecast_DewPoint_hourly": {
+    "dtype": "float64",
+    "role": "reserved_unavailable_weather"
+  },
+  "Forecast_DewPoint_hourly_missing": {
+    "dtype": "bool",
+    "role": "reserved_unavailable_weather"
+  },
+  "HistoricalWeatherSourceMaxTimestamp": {
+    "dtype": "datetime64[ns, UTC]",
+    "role": "lineage"
+  },
+  "HistoricalHeatingExposure24h": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "ForecastHeatingExposure": {
+    "dtype": "float64",
+    "role": "reserved_unavailable_weather"
+  },
+  "HeatingExposureBaseC": {
+    "dtype": "float64",
+    "role": "diagnostic"
+  },
+  "sunshine_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Weather_ID": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Installation_HasPVSystem": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Survey_Building_LivingArea": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Survey_Building_Residents": {
+    "dtype": "float64",
+    "role": "candidate_feature"
+  },
+  "Survey_Building_Type": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Survey_HeatPump_Installation_Type": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Survey_HeatDistribution_System_FloorHeating": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Survey_HeatDistribution_System_Radiator": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Survey_DHW_Production_ByHeatPump": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Survey_DHW_Production_ByElectricWaterHeater": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Survey_DHW_Production_BySolar": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Survey_Installation_HasDryer": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Survey_Installation_HasFreezer": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Survey_Installation_HasElectricVehicle": {
+    "dtype": "object",
+    "role": "candidate_feature"
+  },
+  "Survey_Building_LivingArea_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Survey_Building_Residents_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Survey_Building_Type_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Survey_HeatPump_Installation_Type_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Survey_HeatDistribution_System_FloorHeating_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Survey_HeatDistribution_System_Radiator_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Survey_DHW_Production_ByHeatPump_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Survey_DHW_Production_ByElectricWaterHeater_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Survey_DHW_Production_BySolar_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Survey_Installation_HasDryer_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Survey_Installation_HasFreezer_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Survey_Installation_HasElectricVehicle_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Installation_HasPVSystem_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "MetadataSnapshotAssumedKnown": {
+    "dtype": "bool",
+    "role": "diagnostic"
+  },
+  "Target": {
+    "dtype": "float64",
+    "role": "label"
+  },
+  "TargetSource": {
+    "dtype": "object",
+    "role": "label"
+  },
+  "TargetMissing": {
+    "dtype": "bool",
+    "role": "label"
+  },
+  "TargetNegative": {
+    "dtype": "bool",
+    "role": "label"
+  },
+  "TargetExtremeReview": {
+    "dtype": "bool",
+    "role": "label"
+  },
+  "HistoricalHouseholdBaseline_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "HistoryMissingRate_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "GapAgeHours_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Recent7dMean_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Recent7dMedian_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Recent28dMean_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Recent28dMedian_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Recent7dNightMean_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Recent7dDayMean_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Recent7dEveningMean_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Recent7dPeak_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Recent7dP95_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "RecentChangeRatio_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Recent7dZeroFraction_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "PreviousAvailableSameInterval_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "PreviousAvailableSameIntervalAgeHours_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "PreviousWeekSameLocalInterval_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "RecentSameSlot28dMedian_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "HistoricalHeatingExposure24h_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "ForecastHeatingExposure_missing": {
+    "dtype": "bool",
+    "role": "reserved_unavailable_weather"
+  },
+  "Historical24h_Temperature_avg_hourly_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Historical24h_Humidity_avg_hourly_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Historical24h_Precipitation_total_hourly_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Historical24h_Sunshine_duration_hourly_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Historical24h_WindSpeed_hourly_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  },
+  "Historical24h_DewPoint_hourly_missing": {
+    "dtype": "bool",
+    "role": "candidate_feature"
+  }
+}
